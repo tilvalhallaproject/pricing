@@ -1,0 +1,51 @@
+
+
+h1 {
+text-align : center;
+background-color : black;
+color : white;
+font-family: Helvetica;
+}
+
+body {
+background-color : #dfdfdf;
+font-family :sans-serif;
+text-align : left;
+
+}
+input[type=text] {
+width : 10em;
+font-weight: bolder;
+padding: 10px;
+}
+
+label[for="result"]{
+    font-size: 25px;
+}
+
+.final-quote {
+    float: left;
+}
+
+input[type=email] {
+width : 30em;
+}
+
+button {
+font-size: 45px;
+
+}
+
+.bcontainer {
+    text-align: center;
+    padding: 30px;
+    
+}
+
+#announcementbox {
+    background-color: #cfc ;
+    padding: 10px ;
+    border: 1px solid green ;
+    text-align: center;
+}
+
