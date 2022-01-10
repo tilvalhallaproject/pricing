@@ -6,19 +6,19 @@ function getgarmentValue ()
     var garmentValue = document.getElementById("Garment").value;
 
     if (garmentValue == "Premium Tee") {
-        garmentCost = 8;
+        garmentCost = 11;
         console.log(garmentCost);
     };
     if (garmentValue == "Hoodie") {
-        garmentCost = 24;
+        garmentCost = 20;
         console.log(garmentCost);
     };
     if (garmentValue == "Long Sleeve") {
-        garmentCost = 16;
+        garmentCost = 15;
         console.log(garmentCost);
     };
     if (garmentValue == "Tank Top") {
-        garmentCost = 9;
+        garmentCost = 12;
         console.log(garmentCost);
     
     };
@@ -175,15 +175,32 @@ function getPaymentType ()
         console.log(paymentFee);
     }
 }
-
+//Top Total
 var result = document.getElementById("result");
 
 document.getElementById("submit").addEventListener("click", function() {
+
     var qty = document.getElementById("QTY").value;
-    result.value = "$"+ Math.round(paymentFee * (rushedFee * (complexityFee * (qty * garmentCost + (placementCost*qty) + (inkCost*qty) + designCost + (fandbCost*qty) + (tagCost*qty) + setupCost)))) ;
-    //console.log(complexityFee * (qty * garmentCost + (placementCost*qty) + (inkCost*qty) + designCost + (fandbCost*qty) + (tagCost*qty) + setupCost));
-    var garmentCostSummary =   `the cost of your garments are ${qty*garmentCost}`;
-    var designerCostSummary =   `the cost of the designer fee is ${designCost}`;
-    console.log(garmentCostSummary,'\n',designerCostSummary);
+//Prints Total Result
+    result.value = "$"+ Math.round(paymentFee * (rushedFee * (complexityFee *
+    (qty * garmentCost + (placementCost*qty) + (inkCost*qty) + designCost + 
+    (fandbCost*qty) + (tagCost*qty) + setupCost)))) ;
 });
+//Bottom Total
+var cpuresult = document.getElementById("cpuresult");
+
+document.getElementById("submit").addEventListener("click", function() {
+
+    var qty = document.getElementById("QTY").value;
+    var hold =0;
+    
+    hold = Math.round(paymentFee * (rushedFee * (complexityFee *
+        (qty * garmentCost + (placementCost*qty) + (inkCost*qty) + designCost + 
+        (fandbCost*qty) + (tagCost*qty) + setupCost)))) ;
+//Prints CPU Result
+    cpuresult.value = "$" + hold / qty;
+
+    console.log(cpuresult);
+});
+
 

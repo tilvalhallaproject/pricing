@@ -8,7 +8,7 @@ font-family: Helvetica;
 }
 
 body {
-background-color : #dfdfdf;
+background: white;
 font-family :sans-serif;
 text-align : left;
 
@@ -20,32 +20,54 @@ padding: 10px;
 }
 
 label[for="result"]{
-    font-size: 25px;
-}
+    font-size: 15px;
+    margin: 0;
 
-.final-quote {
-    float: left;
 }
 
 input[type=email] {
 width : 30em;
 }
 
-button {
-font-size: 45px;
+#submit {
 
+    background-color: rgb(0, 128, 0);
+    border: none;
+    color: white;
+    padding: 16px 15%;
+    text-align: center;
+    font-size: 24px;
+    margin: 4px 2px;
+    opacity: 0.8;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    
 }
+
+#submit:hover {opacity: 1}
+ 
+
+
 
 .bcontainer {
     text-align: center;
-    padding: 30px;
+    padding: 10px;
     
 }
 
 #announcementbox {
-    background-color: #cfc ;
+    background-color: rgb(250, 225, 0) ;
     padding: 10px ;
     border: 1px solid green ;
     text-align: center;
+    font-size: 32px;
 }
 
+
+.final-quote {
+    text-align: center;
+    margin: 5px;
+}
