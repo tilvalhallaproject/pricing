@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>T.V.P. Price Matrix</title>
+        <link rel="stylesheet" href="customGarmentPricing.css" type="text/css" />
+    </head>
+ 
+  <h1>Til Valhalla Project Custom Pricing Form </h1>
+  <body>
+    <div id="announcementbox">
+     <b>INFO:</b> Customers are limited to 4 colors and shipping is calculated after everything is done.
+     Make sure to add in taxes, shipping, and credit card fee's after the total. If they want to do ACH
+     it will save them 2.5%. 
+      </div>
+    <h3> How Many Garments Do They Want?</h3>
+    <form>
+        <label for="QTY">How Many Units?</label>
+        <input type="number" id="QTY"></input>
+    </form>
+    <br>
+    <h3>What Type of garment Does The Customer Want?</h3>
+    <form> 
+        <label for="Garment">Choose a garment:</label>
+        <select id="Garment" name="Garment" onchange="getgarmentValue();">
+          <option value="Placeholder">Please Choose An Option</option>
+          <option value="Premium Tee">Premium Tee</option>
+          <option value="Long Sleeve">Long Sleeve</option>
+          <option value="Hoodie">Hoodie</option>
+          <option value="Tank Top">Tank Top</option>
+        </select>
+        </form>
+        <br>
+    <h3>How Many Print Locations?</h3>
+      <form>
+        <label for="Locations">Choose QTY of Print Locations:</label>
+        <select id="Locations" name="Locations" onchange="getPlacementValue();">
+          <option value="Placeholder">Please Choose An Option</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      </form>
+        <br>
+  <h3> How Many Different Ink Colors?</h3>
+    <form>
+        <label for="Ink Colors">Choose How Many Different Ink Colors:</label>
+        <select id="Ink Colors" name="Ink Colors" onchange="getInkValue ();">
+          <option value="Placeholder">Please Choose An Option</option>
+          <option value="1 Color">1 Color</option>
+          <option value="2 Colors">2 Colors</option>
+          <option value="3 Colors">3 Colors</option>
+          <option value="4 Colors">4 Colors</option>
+        </select>
+    </form> 
+    <br>
+    <h3> Does The Customer Need Design Help?</h3>
+    <form>
+        <label for="Design Help">Please Choose Yes Or No:</label>
+        <select id="Design Help" name="Design Help" onchange="getDesignFee();">
+          <option value="Placeholder">Please Choose An Option</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+    </form> 
+    <br>
+    <h3> Does The Customer Need The Final Product Folded and Bagged?</h3>
+    <form>
+        <label for="FandB">Please Choose Yes Or No:</label>
+        <select id="FandB" name="FandB" onchange="getFoldandBagFee ();">
+          <option value="Placeholder">Please Choose An Option</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+    </form> 
+    <br>
+    <h3> Does The Customer Need The Final Product Tagged?</h3>
+    <form>
+        <label for="Tagged">Please Choose Yes Or No:</label>
+        <select id="Tagged" name="Tagged" onchange="getTagFee ();">
+          <option value="Placeholder">Please Choose An Option</option>
+          <option value="Yes Tag">Yes Tags Needed</option>
+          <option value="No Tag">No Tag Needed</option>
+        </select>
+    </form> 
+    <br>
+    <h3> Does the customer need this rush ordered (1 Week Turn Around)</h3>
+    <form>
+        <label for="Rushed">Please Choose Yes Or No:</label>
+        <select id="Rushed" name="Rushed" onchange="getRushedFee ();">
+          <option value="Placeholder">Please Choose An Option</option>
+          <option value="Yes Rush">Yes Please Rush (+5%)</option>
+          <option value="No Rush">No Rush Needed</option>
+        </select>
+    </form> 
+    <br>
+    <h3> What Is the complexity of this job?</h3>
+    <form>
+        <label for="complexity">Please Choose the Complexity:</label>
+        <select id="complexity" name="complexity" onchange="getComplexity ();">
+          <option value="Placeholder">Please Choose An Option</option>
+          <option value="Low">Low (No Upcharge)</option>
+          <option value="Medium">Medium (+ 2.5%)</option>
+          <option value="High">High (+ 5%)</option>
+        </select>
+    </form> 
+    <br>
+    <h3> Does The Customer Need Us To Ship?</h3>
+    <form>
+        <label for="Shipping">Please Choose Yes Or No:</label>
+        <select id="Shipping" name="Shipping" onchange="getShipping ();"> 
+          <option value="Placeholder">Please Choose An Option</option>
+          <option value="Yes Ship">Yes They Need Us To Ship</option>
+          <option value="No Ship">No They Do Not Need Us To Ship</option>
+        </select>
+    </form>
+    <br>
+  
+    <h3> How is the customer paying?</h3>
+    <form>
+        <label for="paymentType">Please Choose A Payment Type</label>
+        <select id="paymentType" name="paymentType" onchange="getPaymentType ();"> 
+          <option value="Placeholder">Please Choose An Option</option>
+          <option value="ACH">ACH (No Additional Fees)</option>
+          <option value="Wire Transfer">Wire Transfer (No Additional Fees)</option>
+          <option value="Credit Card">Credit Card (+2.5%)</option>
+        </select>
+    </form>
+
+    <br>
+    
+    <div class="final-quote"><b>Order Total :</b>
+      <input type="text" readonly id="result"/>
+      <div class="final-quote"><b>Cost Per Tee</b>
+       <input type="text" readonly id="cpuresult"/>
+        <div class="bcontainer"> 
+        <button id="submit">Generate Quote 🚀</button>
+        </div>
+      </div>
+     </div>
+    </div>
+    </body>
+
+
+
+  </body>
+</html>
+
+<script type="text/javascript" src="customGarmentPricing.js"></script>
